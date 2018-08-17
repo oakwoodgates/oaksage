@@ -1,6 +1,30 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
-$theme-colors: (
-  primary: #525ddc
-);
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$blue: #3498db;
+$indigo: #34495e;
+$purple: #9b59b6;
+$pink: #e83e8c;
+$red: #e74c3c;
+$orange: #e67e22;
+$yellow: #f1c40f;
+$green: #2ecc71;
+$teal: #1abc9c;
+$cyan: #3498db;
+$primary: $indigo;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-800;
