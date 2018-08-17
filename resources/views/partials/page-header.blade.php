@@ -1,3 +1,3 @@
-<div class="page-header">
+<header class="jumbotron">
   <h1>{!! App::title() !!}</h1>
-</div>
+</header>
