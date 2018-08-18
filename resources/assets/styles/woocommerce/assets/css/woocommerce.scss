@@ -1279,7 +1279,7 @@ p.demo_store,
 
 		.woocommerce-input-wrapper {
 			.description {
-				background: #1e85be;
+				background: $info;
 				color: #fff;
 				border-radius: 3px;
 				padding: 1em;
@@ -1304,7 +1304,7 @@ p.demo_store,
 					position: absolute;
 					border-width: 4px 6px 0 6px;
 					border-style: solid;
-					border-color: #1e85be transparent transparent transparent;
+					border-color: $info transparent transparent transparent;
 					z-index: 100;
 					display: block;
 				}
@@ -1719,28 +1719,28 @@ p.demo_store,
 }
 
 .woocommerce-message {
-	border-top-color: #8fae1b;
+	border-top-color: $success;
 
 	&::before {
 		content: '\e015';
-		color: #8fae1b;
+		color: $success;
 	}
 }
 
 .woocommerce-info {
-	border-top-color: #1e85be;
+	border-top-color: $info;
 
 	&::before {
-		color: #1e85be;
+		color: $info;
 	}
 }
 
 .woocommerce-error {
-	border-top-color: #b81c23;
+	border-top-color: $danger;
 
 	&::before {
 		content: '\e016';
-		color: #b81c23;
+		color: $danger;
 	}
 }
 
