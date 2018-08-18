@@ -7,6 +7,9 @@ add_action('after_setup_theme', function () {
     add_theme_support( 'wc-product-gallery-slider' );
 });
 
+// remove woocommerce stylessheets
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
 
 // archive-product template
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
