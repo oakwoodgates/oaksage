@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1387af18b4df853db96edd5d561c8545",
+    "hash": "471f3cc2b9e56f811f6334b98bc48700",
+    "content-hash": "519e6dee82f1689251831382d21644ca",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -60,7 +61,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2017-12-28T17:16:07+00:00"
+            "time": "2017-12-28 17:16:07"
         },
         {
             "name": "composer/installers",
@@ -180,7 +181,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-12-29T09:13:20+00:00"
+            "time": "2017-12-29 09:13:20"
         },
         {
             "name": "doctrine/inflector",
@@ -247,7 +248,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2018-01-09T20:05:19+00:00"
+            "time": "2018-01-09 20:05:19"
         },
         {
             "name": "hassankhan/config",
@@ -304,7 +305,7 @@
                 "yaml",
                 "yml"
             ],
-            "time": "2016-02-11T16:21:17+00:00"
+            "time": "2016-02-11 16:21:17"
         },
         {
             "name": "illuminate/config",
@@ -348,7 +349,7 @@
             ],
             "description": "The Illuminate Config package.",
             "homepage": "https://laravel.com",
-            "time": "2017-11-07T20:23:51+00:00"
+            "time": "2017-11-07 20:23:51"
         },
         {
             "name": "illuminate/container",
@@ -392,7 +393,7 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "https://laravel.com",
-            "time": "2018-01-21T02:13:38+00:00"
+            "time": "2018-01-21 02:13:38"
         },
         {
             "name": "illuminate/contracts",
@@ -436,7 +437,7 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2018-04-07T17:05:26+00:00"
+            "time": "2018-04-07 17:05:26"
         },
         {
             "name": "illuminate/events",
@@ -481,7 +482,7 @@
             ],
             "description": "The Illuminate Events package.",
             "homepage": "https://laravel.com",
-            "time": "2018-02-26T19:00:55+00:00"
+            "time": "2018-02-26 19:00:55"
         },
         {
             "name": "illuminate/filesystem",
@@ -533,7 +534,7 @@
             ],
             "description": "The Illuminate Filesystem package.",
             "homepage": "https://laravel.com",
-            "time": "2018-04-06T13:15:37+00:00"
+            "time": "2018-04-06 13:15:37"
         },
         {
             "name": "illuminate/support",
@@ -590,7 +591,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2018-04-17T12:26:47+00:00"
+            "time": "2018-04-17 12:26:47"
         },
         {
             "name": "illuminate/view",
@@ -638,7 +639,50 @@
             ],
             "description": "The Illuminate View package.",
             "homepage": "https://laravel.com",
-            "time": "2018-04-03T12:56:35+00:00"
+            "time": "2018-04-03 12:56:35"
+        },
+        {
+            "name": "mwdelaney/sage-bootstrap4-navwalker",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MWDelaney/sage-bootstrap4-navwalker.git",
+                "reference": "8e9bcfc6ec813df7c2a102b06218334f502858b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MWDelaney/sage-bootstrap4-navwalker/zipball/8e9bcfc6ec813df7c2a102b06218334f502858b8",
+                "reference": "8e9bcfc6ec813df7c2a102b06218334f502858b8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap4-navwalker.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael W. Delaney",
+                    "email": "michael@michaeldelaney.me"
+                }
+            ],
+            "description": "Bootstrap 4 Navbar component navwalker for Sage 9 based themes",
+            "homepage": "https://github.com/MWDelaney/sage-bootstrap4-navwalker",
+            "keywords": [
+                "bootstrap 4",
+                "navbar",
+                "navwalker",
+                "wordpress"
+            ],
+            "time": "2018-05-31 13:07:33"
         },
         {
             "name": "nesbot/carbon",
@@ -686,7 +730,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-04-23T09:02:57+00:00"
+            "time": "2018-04-23 09:02:57"
         },
         {
             "name": "psr/container",
@@ -735,7 +779,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-02-14T16:28:37+00:00"
+            "time": "2017-02-14 16:28:37"
         },
         {
             "name": "psr/log",
@@ -782,7 +826,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "psr/simple-cache",
@@ -830,7 +874,7 @@
                 "psr-16",
                 "simple-cache"
             ],
-            "time": "2017-10-23T01:57:42+00:00"
+            "time": "2017-10-23 01:57:42"
         },
         {
             "name": "roots/sage-lib",
@@ -882,7 +926,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2018-04-25T17:24:31+00:00"
+            "time": "2018-04-25 17:24:31"
         },
         {
             "name": "soberwp/controller",
@@ -934,7 +978,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2017-08-22T17:35:30+00:00"
+            "time": "2017-08-22 17:35:30"
         },
         {
             "name": "symfony/debug",
@@ -990,7 +1034,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03T05:24:00+00:00"
+            "time": "2018-04-03 05:24:00"
         },
         {
             "name": "symfony/finder",
@@ -1039,7 +1083,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-04T05:10:37+00:00"
+            "time": "2018-04-04 05:10:37"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1098,7 +1142,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-01-30 19:27:44"
         },
         {
             "name": "symfony/translation",
@@ -1166,7 +1210,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-22T10:50:29+00:00"
+            "time": "2018-02-22 10:50:29"
         },
         {
             "name": "symfony/yaml",
@@ -1224,7 +1268,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03T05:14:20+00:00"
+            "time": "2018-04-03 05:14:20"
         }
     ],
     "packages-dev": [
@@ -1276,7 +1320,7 @@
             ],
             "description": "The Illuminate Console package.",
             "homepage": "https://laravel.com",
-            "time": "2018-04-07T17:05:26+00:00"
+            "time": "2018-04-07 17:05:26"
         },
         {
             "name": "roots/sage-installer",
@@ -1334,7 +1378,7 @@
                 "theme",
                 "wordpress"
             ],
-            "time": "2018-04-25T17:45:56+00:00"
+            "time": "2018-04-25 17:45:56"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -1412,7 +1456,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-05-22T02:43:20+00:00"
+            "time": "2017-05-22 02:43:20"
         },
         {
             "name": "symfony/console",
@@ -1480,7 +1524,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03T05:24:00+00:00"
+            "time": "2018-04-03 05:24:00"
         },
         {
             "name": "symfony/process",
@@ -1529,7 +1573,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-04-03 05:22:50"
         }
     ],
     "aliases": [],

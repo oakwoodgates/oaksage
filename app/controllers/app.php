@@ -30,4 +30,15 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public static function primarymenu() {
+        $args = array(
+            'theme_location'    => 'primary_navigation',
+            'menu_class'        => 'navbar-nav',
+            'container_class' => 'collapse navbar-collapse',
+            'container_id' => 'navbarSupportedContent',
+            'walker'            => new wp_bootstrap4_navwalker()
+        );
+        return $args;
+    }
 }
