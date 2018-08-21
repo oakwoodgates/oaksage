@@ -1,5 +1,4 @@
 <footer class="content-info">
-  <div class="container">
-    @php dynamic_sidebar('sidebar-footer') @endphp
-  </div>
+  @include('partials.footer-widgets')
+  @include('partials.footer-socket')
 </footer>

@@ -3,9 +3,9 @@
   @include('partials.head')
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
-    @include('partials.header-1')
-    <div class="wrap container" role="document">
-      <div class="content">
+    <div class="wrap mx-auto">
+      @include('partials.header')
+      <div class="content" role="document">
         <main class="main">
           @yield('content')
         </main>
@@ -15,9 +15,11 @@
           </aside>
         @endif
       </div>
+      @section('footer')
+        @php do_action('get_footer') @endphp
+        @include('partials.footer')
+      @show
     </div>
-    @php do_action('get_footer') @endphp
-    @include('partials.footer')
     @php wp_footer() @endphp
   </body>
 </html>
