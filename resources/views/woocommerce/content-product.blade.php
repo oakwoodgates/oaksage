@@ -12,7 +12,7 @@ The template for displaying product content within loops
 @if(empty($product) || ! $product->is_visible())
     return
 @endif
-<div {{ post_class('card product mb-5') }}>
+<div {{ post_class('card mb-5 text-center') }}>
     @php 
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
