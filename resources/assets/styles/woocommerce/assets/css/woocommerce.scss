@@ -79,13 +79,13 @@ p.demo_store,
 		text-align: center;
 		line-height: 1;
 		border-radius: 100%;
-		color: red !important; // Required for default theme compatibility
+		color: red !important; /* Required for default theme compatibility*/
 		text-decoration: none;
 		font-weight: 700;
 		border: 0;
 
 		&:hover {
-			color: #fff !important; // Required for default theme compatibility
+			color: #fff !important; /* Required for default theme compatibility*/
 			background: red;
 		}
 	}
@@ -230,7 +230,8 @@ p.demo_store,
 					position: absolute;
 					top: 19px;
 					left: 22px;
-					transform: rotate(-45deg);
+					-webkit-transform: rotate(-45deg);
+					        transform: rotate(-45deg);
 					box-sizing: content-box;
 				}
 			}
@@ -498,7 +499,8 @@ p.demo_store,
 					display: inline-block;
 					width: auto;
 					margin: 0 auto;
-					transform:scale(1.5, 1.5);
+					-webkit-transform:scale(1.5, 1.5);
+					        transform:scale(1.5, 1.5);
 				}
 			}
 		}
@@ -678,7 +680,7 @@ p.demo_store,
 		overflow: visible;
 		padding: 0.618em 1em;
 		font-weight: 700;
-		border-radius: 3px;
+		@include border-radius($btn-border-radius);
 		left: auto;
 		color: $secondarytext;
 		background-color: $secondary;
@@ -700,7 +702,8 @@ p.demo_store,
 				position: absolute;
 				top: 0.618em;
 				right: 1em;
-				animation: spin 2s linear infinite;
+				-webkit-animation: spin 2s linear infinite;
+				        animation: spin 2s linear infinite;
 			}
 		}
 
@@ -840,7 +843,7 @@ p.demo_store,
 					.comment-text {
 						margin: 0 0 0 50px;
 						border: 1px solid darken( $secondary, 3% );
-						border-radius: 4px;
+						@include border-radius($input-border-radius);
 						padding: 1em 1em 0;
 						@include clearfix();
 
@@ -865,7 +868,7 @@ p.demo_store,
 
 				#respond {
 					border: 1px solid darken( $secondary, 3% );
-					border-radius: 4px;
+					@include border-radius($input-border-radius);
 					padding: 1em 1em 0;
 					margin: 20px 0 0 50px;
 				}
@@ -1053,7 +1056,7 @@ p.demo_store,
 		text-align: left;
 		width: 100%;
 		border-collapse: separate;
-		border-radius: 5px;
+		@include border-radius($card-border-radius);
 
 		th {
 			font-weight: 700;
@@ -1281,7 +1284,7 @@ p.demo_store,
 			.description {
 				background: $info;
 				color: #fff;
-				border-radius: 3px;
+				@include border-radius($input-border-radius);
 				padding: 1em;
 				margin: .5em 0 0;
 				clear: both;
@@ -1299,7 +1302,8 @@ p.demo_store,
 					left: 50%;
 					top: 0%;
 					margin-top: -4px;
-					transform: translatex(-50%) rotate(180deg);
+					-webkit-transform: translatex(-50%) rotate(180deg);
+					        transform: translatex(-50%) rotate(180deg);
 					content: "";
 					position: absolute;
 					border-width: 4px 6px 0 6px;
@@ -1321,7 +1325,7 @@ p.demo_store,
 			font-weight: 700;
 			border: 0 !important;
 			text-decoration: none;
-			visibility: hidden; // Only show optional by default.
+			visibility: hidden; /* Only show optional by default.*/
 		}
 
 		.optional {
@@ -1395,7 +1399,7 @@ p.demo_store,
 		padding: 20px;
 		margin: 2em 0;
 		text-align: left;
-		border-radius: 5px;
+		@include border-radius($input-border-radius);
 	}
 
 	ul#shipping_method {
@@ -1480,7 +1484,7 @@ p.demo_store,
 			border-right-width: 2px;
 			text-align: left;
 			width: 100%;
-			border-radius: 5px;
+			@include border-radius($input-border-radius);
 			padding: 6px 12px;
 		}
 		.woocommerce-customer-details--phone,
@@ -1702,9 +1706,9 @@ p.demo_store,
 	}
 
 	li {
-		list-style: none outside !important; // Required for default theme compatibility
-		padding-left: 0 !important; // Required for default theme compatibility
-		margin-left: 0 !important; // Required for default theme compatibility
+		list-style: none outside !important; /* Required for default theme compatibility*/
+		padding-left: 0 !important; /* Required for default theme compatibility*/
+		margin-left: 0 !important; /* Required for default theme compatibility*/
 	}
 }
 
@@ -1944,7 +1948,7 @@ p.demo_store,
 
 	#payment {
 		background: $secondary;
-		border-radius: 5px;
+		@include border-radius($card-border-radius);
 
 		ul.payment_methods {
 			@include clearfix();
