@@ -1,9 +1,7 @@
 <article @php post_class() @endphp>
-  <header>
-    @include('partials.page-header')
-  </header>
-  @include('partials/entry-meta')
-  <div class="entry-content">
+  @include('partials.page-header')
+  <div class="entry-content col-12 col-md-9 col-lg-8 col-xl-6 mx-auto">
+  	@include('partials/entry-meta')
     @php the_content() @endphp
   </div>
   <footer>
