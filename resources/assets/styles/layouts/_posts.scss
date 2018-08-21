@@ -1,0 +1,26 @@
+.s-gutenberg.entry-content > * {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.s-gutenberg.entry-content > *:not(.alignwide):not(.alignfull) {
+	padding-left: ($grid-gutter-width / 2);
+	padding-right: ($grid-gutter-width / 2);
+}
+
+.s-gutenberg.entry-content > blockquote:not(.wp-block-pullquote) {
+	padding-left: $grid-gutter-width;
+}
+
+.s-gutenberg.entry-content .wp-block-embed {
+	text-align: center;
+}
+
+@include media-breakpoint-up(md) { 
+	.s-gutenberg.entry-content > *:not(.alignwide):not(.alignfull) { 
+		max-width: map-get($container-max-widths, "md");
+	}
+	.s-gutenberg.entry-content .alignwide { 
+		max-width: map-get($grid-breakpoints, "xl");
+	}
+}
