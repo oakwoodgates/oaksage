@@ -1,16 +1,5 @@
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-	height: $input-height;
-}
-
-.card-deck .product {
-  min-width: 220px;
-  max-width: 380px;
-}
-
-@media only screen and (min-width: 576px) {
-  .card-deck .product {
-    flex-basis: 20%;
-  }
+  height: $input-height;
 }
 
 input.input-text,
@@ -89,7 +78,7 @@ input.input-text,
 }
 
 .woocommerce .form-row {
-	display: block;
+  display: block;
 }
 @import 'assets/css/woocommerce-layout';
 @import 'assets/css/woocommerce-smallscreen';

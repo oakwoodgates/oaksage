@@ -12,17 +12,16 @@ The template for displaying product content within loops
 @if(empty($product) || ! $product->is_visible())
     return
 @endif
-<div {{ post_class('card mb-5 text-center') }}>
+<div class="d-flex col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+	<div {{ wc_product_class('card mb-5 text-center w-100') }}>
     @php 
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
 	 *
-	 * --@hooked woocommerce_template_loop_product_link_open - 10
+	 * @hooked woocommerce_template_loop_product_link_open - 10
 	 */
-    $link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
     do_action( 'woocommerce_before_shop_loop_item' ) @endphp
 
-	<a href="@php echo esc_url( $link ) @endphp" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
 		@php
 		/**
 		 * Hook: woocommerce_before_shop_loop_item_title.
@@ -31,8 +30,7 @@ The template for displaying product content within loops
 		 * @hooked woocommerce_template_loop_product_thumbnail - 10
 		 */
 		do_action( 'woocommerce_before_shop_loop_item_title' ) @endphp
-	</a>
-    <a href="@php echo esc_url( $link ) @endphp" class="card-body">
+
 	    @php 
 		/**
 		 * Hook: woocommerce_shop_loop_item_title.
@@ -49,14 +47,14 @@ The template for displaying product content within loops
 		 * @hooked woocommerce_template_loop_price - 10
 		 */
 	    do_action( 'woocommerce_after_shop_loop_item_title' ) @endphp
-    </a>
 
 	@php 
 	/**
 	 * Hook: woocommerce_after_shop_loop_item.
 	 *
-	 * --@hooked woocommerce_template_loop_product_link_close - 5
+	 * @hooked woocommerce_template_loop_product_link_close - 5
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
     do_action( 'woocommerce_after_shop_loop_item' ) @endphp
+	</div>
 </div>

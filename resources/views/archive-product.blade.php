@@ -47,7 +47,7 @@ The Template for displaying product archives, including the main shop page which
              do_action('woocommerce_before_shop_loop') @endphp
 
             @if(wc_get_loop_prop('total'))
-                <div class="card-deck">
+                <div class="row">
                     @while(have_posts()) @php the_post() @endphp
                         @php 
                         /**
