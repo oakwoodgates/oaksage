@@ -30,3 +30,18 @@ add_filter( 'woocommerce_single_product_image_gallery_classes', function($classe
 	return $classes;
 });
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+
+
+// locate template overrides
+add_filter( 'wc_get_template', 'oaksage_wc_get_template', 10, 5 );
+function oaksage_wc_get_template( $located, $template_name, $args, $template_path, $default_path ) {
+	$r = pathinfo($template_name);
+	$s = STYLESHEETPATH.'/views/woocommerce/'.$r['dirname'].'/'.$r['filename'].'.blade.php';
+	if (file_exists($s)) {
+		// output the blade template
+		echo App\Template('woocommerce/'.$r['dirname'].'/'.$r['filename']);
+		// return a file just to make woocommerce happy
+		return STYLESHEETPATH.'/index.php';
+	}
+	return $located;
+}
