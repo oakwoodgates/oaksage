@@ -1,0 +1,31 @@
+body {
+	word-wrap: break-word;
+}
+
+.entry-content img {
+	max-width: 100%;
+}
+
+@include media-breakpoint-up(sm) { 
+	.container { 
+		max-width: map-get($grid-breakpoints, "xl");
+	}
+}
+
+@include media-breakpoint-up(md) { 
+	.container { 
+		max-width: map-get($grid-breakpoints, "xl");
+	}
+}
+
+@include media-breakpoint-up(lg) { 
+	.container { 
+		max-width: map-get($grid-breakpoints, "xl");
+	}
+}
+
+@include media-breakpoint-up(xl) { 
+	.container { 
+		max-width: map-get($grid-breakpoints, "xl");
+	}
+}
