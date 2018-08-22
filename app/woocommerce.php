@@ -47,3 +47,16 @@ function oaksage_wc_get_template( $located, $template_name, $args, $template_pat
 	}
 	return $located;
 }
+
+add_filter( 'wc_get_template_part', 'oaksage_wc_get_template_part', 10, 3 );
+function oaksage_wc_get_template_part( $template, $slug, $name ) {
+	$name = ($name)?'-'.$name:'';
+	$t = STYLESHEETPATH.'/views/woocommerce/'.$slug.$name.'.blade.php';
+	if (file_exists($t)) {
+		// output the blade template
+		echo App\Template('woocommerce/'.$slug.$name);
+		// return a file just to make woocommerce happy
+		return STYLESHEETPATH.'/index.php';
+	}
+	return $template;
+}

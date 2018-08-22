@@ -30,7 +30,6 @@ The Template for displaying product archives, including the main shop page which
              * @hooked woocommerce_product_archive_description - 10
              */
             do_action( 'woocommerce_archive_description' )
-            // woocommerce_product_loop_start()
             @endphp
         </div>
     </header>
@@ -44,30 +43,30 @@ The Template for displaying product archives, including the main shop page which
              * --@hooked woocommerce_result_count - 20
              * --@hooked woocommerce_catalog_ordering - 30
              */
-             do_action('woocommerce_before_shop_loop') @endphp
+             do_action('woocommerce_before_shop_loop'); 
+             woocommerce_product_loop_start();
+             @endphp
 
             @if(wc_get_loop_prop('total'))
-                <div class="row">
-                    @while(have_posts()) @php the_post() @endphp
-                        @php 
-                        /**
-                         * Hook: woocommerce_shop_loop.
-                         *
-                         * @hooked WC_Structured_Data::generate_product_data() - 10
-                         */
-                        do_action('woocommerce_shop_loop') @endphp
-                        @include('woocommerce.content-product')
-                    @endwhile
-                </div>
+                @while(have_posts()) @php the_post() @endphp
+                    @php 
+                    /**
+                     * Hook: woocommerce_shop_loop.
+                     *
+                     * @hooked WC_Structured_Data::generate_product_data() - 10
+                     */
+                    do_action('woocommerce_shop_loop') @endphp
+                    @include('woocommerce.content-product')
+                @endwhile
             @endif
             @php 
-            // woocommerce_product_loop_end()
+            woocommerce_product_loop_end();
             /**
              * Hook: woocommerce_after_shop_loop.
              *
              * @hooked woocommerce_pagination - 10
              */
-            do_action( 'woocommerce_after_shop_loop' ) @endphp
+            do_action( 'woocommerce_after_shop_loop' ); @endphp
         @else
             @php
             /**

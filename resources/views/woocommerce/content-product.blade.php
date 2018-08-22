@@ -12,7 +12,11 @@ The template for displaying product content within loops
 @if(empty($product) || ! $product->is_visible())
     return
 @endif
+@if(is_archive())
 <div class="d-flex col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+@else
+<div class="d-flex col-12 col-sm-6 col-lg-3">
+@endif
 	<div {{ wc_product_class('card mb-5 text-center w-100') }}>
     @php 
 	/**
