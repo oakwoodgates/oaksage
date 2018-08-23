@@ -6,18 +6,21 @@
 
 </div><!-- #item-header -->
 
-<div class="bp-wrap container">
-	@php if ( ! bp_nouveau_is_object_nav_in_sidebar() ) : @endphp
+<div class="bp-wrap container-fluid">
+	<div class="row">
+		<div class="col-12 col-lg-4 col-xl-3">
+			@php if ( ! bp_nouveau_is_object_nav_in_sidebar() ) : @endphp
 
-		@php bp_get_template_part( 'members/single/parts/item-nav' ); @endphp
+				@php bp_get_template_part( 'members/single/parts/item-nav' ); @endphp
 
-	@php endif; @endphp
+			@php endif; @endphp
+		</div>
+		<div id="item-body" class="item-body col-12 col-lg-8 col-xl-9">
 
-	<div id="item-body" class="item-body">
+			@php bp_nouveau_member_template_part(); @endphp
 
-		@php bp_nouveau_member_template_part(); @endphp
-
-	</div><!-- #item-body -->
+		</div><!-- #item-body -->
+	</div>
 </div><!-- // .bp-wrap -->
 
 @php bp_nouveau_member_hook( 'after', 'home_content' ); @endphp
