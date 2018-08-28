@@ -1,2 +1,2 @@
 <?php
-	echo App\Template('page');
+	echo App\Template('bbpress');

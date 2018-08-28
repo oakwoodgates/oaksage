@@ -11,8 +11,8 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, time());
+    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], time(), true);
 }, 100);
 
 /**
@@ -66,6 +66,13 @@ add_action('after_setup_theme', function () {
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
     add_editor_style(asset_path('styles/main.css'));
+
+    // support align-wide in gutenberg
+    add_theme_support( 'align-wide' );
+    if ( ! isset( $content_width ) ) {
+        $content_width = 900;
+    }
+
 }, 20);
 
 /**
@@ -73,16 +80,22 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget mb-2 col-12 col-md-6 col-lg-3 %1$s %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'
     ];
     register_sidebar([
+        'before_widget' => '<section class="widget mb-2 col-12 col-md-6 col-lg-3 %1$s %2$s">',
         'name'          => __('Primary', 'sage'),
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
+        'before_widget' => '<section class="widget mb-2 col-12 col-sm-6 col-md-12 %1$s %2$s">',
+        'name'          => __('Shop', 'sage'),
+        'id'            => 'sidebar-shop'
+    ] + $config);
+    register_sidebar([
+        'before_widget' => '<section class="widget mb-2 col-12 col-md-6 col-lg-3 %1$s %2$s">',
         'name'          => __('Footer', 'sage'),
         'id'            => 'sidebar-footer'
     ] + $config);

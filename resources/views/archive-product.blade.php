@@ -34,55 +34,69 @@ The Template for displaying product archives, including the main shop page which
         </div>
     </header>
     <div class="container-fluid">
-        @if(have_posts())
-            @php
-            /**
-             * Hook: woocommerce_before_shop_loop.
-             *
-             * @hooked wc_print_notices - 10
-             * --@hooked woocommerce_result_count - 20
-             * --@hooked woocommerce_catalog_ordering - 30
-             */
-             do_action('woocommerce_before_shop_loop'); 
-             woocommerce_product_loop_start();
-             @endphp
-
-            @if(wc_get_loop_prop('total'))
-                @while(have_posts()) @php the_post() @endphp
-                    @php 
+        <div class="row">
+            <div class="col-md-8 col-lg-9 col-xl-9 order-md-2">
+                @if(woocommerce_product_loop())
+                    @php
                     /**
-                     * Hook: woocommerce_shop_loop.
+                     * Hook: woocommerce_before_shop_loop.
                      *
-                     * @hooked WC_Structured_Data::generate_product_data() - 10
+                     * @hooked wc_print_notices - 10
+                     * --@hooked woocommerce_result_count - 20
+                     * --@hooked woocommerce_catalog_ordering - 30
                      */
-                    do_action('woocommerce_shop_loop') @endphp
-                    @include('woocommerce.content-product')
-                @endwhile
-            @endif
-            @php 
-            woocommerce_product_loop_end();
-            /**
-             * Hook: woocommerce_after_shop_loop.
-             *
-             * @hooked woocommerce_pagination - 10
-             */
-            do_action( 'woocommerce_after_shop_loop' ); @endphp
-        @else
+                     do_action('woocommerce_before_shop_loop'); 
+
+                     woocommerce_product_loop_start();
+                     @endphp
+
+                    @if( wc_get_loop_prop( 'total' ) )
+                        @while( have_posts() ) 
+                            @php the_post() @endphp
+                            @php 
+                            /**
+                             * Hook: woocommerce_shop_loop.
+                             *
+                             * @hooked WC_Structured_Data::generate_product_data() - 10
+                             */
+                            do_action('woocommerce_shop_loop') @endphp
+                            @include('woocommerce.content-product')
+                        @endwhile
+                    @endif
+                    @php 
+                    woocommerce_product_loop_end();
+                    /**
+                     * Hook: woocommerce_after_shop_loop.
+                     *
+                     * @hooked woocommerce_pagination - 10
+                     */
+                    do_action( 'woocommerce_after_shop_loop' ); @endphp
+                @else
+                    @php
+                    /**
+                     * Hook: woocommerce_no_products_found.
+                     *
+                     * @hooked wc_no_products_found - 10
+                     */
+                    do_action( 'woocommerce_no_products_found' ) @endphp
+                @endif
+                @php
+                /**
+                 * Hook: woocommerce_after_main_content.
+                 *
+                 * --@hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+                 */
+                do_action( 'woocommerce_after_main_content' ) @endphp
+
+            </div>
             @php
             /**
-             * Hook: woocommerce_no_products_found.
+             * Hook: woocommerce_sidebar.
              *
-             * @hooked wc_no_products_found - 10
+             * @hooked woocommerce_get_sidebar - 10
              */
-            do_action( 'woocommerce_no_products_found' ) @endphp
-        @endif
-        @php
-        /**
-         * Hook: woocommerce_after_main_content.
-         *
-         * --@hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-         */
-        do_action( 'woocommerce_after_main_content' ) @endphp
+            do_action( 'woocommerce_sidebar' ) @endphp
+        </div>
     </div>
 
 

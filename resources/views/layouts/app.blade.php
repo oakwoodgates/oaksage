@@ -2,10 +2,10 @@
 <html @php language_attributes() @endphp>
   @include('partials.head')
   <body @php body_class() @endphp>
-    <div class="wrap mx-auto" style="max-width: 1500px;">
+    <div class="wrap mx-auto" style="max-width: 1400px;">
       @php do_action('get_header') @endphp
       @include('partials.header')
-      <div class="content" role="document">
+      <div class="content clearfix" role="document">
         <main class="main">
           @yield('content')
         </main>

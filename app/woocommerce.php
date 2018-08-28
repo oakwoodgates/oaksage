@@ -42,6 +42,7 @@ function oaksage_wc_get_template( $located, $template_name, $args, $template_pat
 	if (file_exists($s)) {
 		// output the blade template
 		echo App\Template('woocommerce/'.$r['dirname'].'/'.$r['filename']);
+		// return '';
 		// return a file just to make woocommerce happy
 		return STYLESHEETPATH.'/index.php';
 	}
@@ -55,8 +56,13 @@ function oaksage_wc_get_template_part( $template, $slug, $name ) {
 	if (file_exists($t)) {
 		// output the blade template
 		echo App\Template('woocommerce/'.$slug.$name);
+		return '';
 		// return a file just to make woocommerce happy
-		return STYLESHEETPATH.'/index.php';
+	//	return STYLESHEETPATH.'/index.php';
 	}
 	return $template;
 }
+
+// add_filter( 'woocommerce_template_path', function( $path ) {
+//    return trailingslashit( STYLESHEETPATH ) . trailingslashit( 'views' ) . ( $path );
+// } );
