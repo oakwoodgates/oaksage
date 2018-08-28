@@ -2,6 +2,13 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.content-page')
+    @if (bp_is_user())
+      @include('partials.content-page')
+    @else 
+      @include('partials.page-header')
+      <div class="container">
+        @include('partials.content-page')
+      </div>
+    @endif 
   @endwhile
 @endsection
